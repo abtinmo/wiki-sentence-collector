@@ -79,5 +79,6 @@ if __name__ == '__main__':
         for sentence in sent_tokenize(normalaized_text):
             if valid_sentence := apply_common_voice_rulls(sentence):
                 with open('sentences.txt', 'a') as f:
+                    page_count += 1
                     f.write(f"{valid_sentence}\n")
                     print(valid_sentence)
